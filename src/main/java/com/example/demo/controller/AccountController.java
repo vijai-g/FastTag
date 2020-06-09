@@ -90,7 +90,7 @@ public class AccountController {
 	 * @param location
 	 * @return
 	 */
-	@GetMapping("/findByLoc{location}")
+	@GetMapping("/findByLoc/{location}")
 	public List<AccountUser> getUserbyloc(@PathVariable String location) {
 		return auRepo.findByLocation(location);
 	}

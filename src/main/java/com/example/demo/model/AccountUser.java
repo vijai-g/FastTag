@@ -11,6 +11,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
@@ -18,6 +19,7 @@ import lombok.Data;
 @Table(name="ACCOUNT_USER")
 @NamedQuery(name="AccountUser.findAll", query="SELECT a FROM AccountUser a")
 public class AccountUser implements Serializable {
+	
 	private static final long serialVersionUID = 1L;
 
 	@Id

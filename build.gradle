@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
 compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-	testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
+	
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -35,6 +35,16 @@ compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
+	
+	//Test
+	// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher
+testCompile group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.5.1'
+	
+	 testImplementation('org.junit.jupiter:junit-jupiter-api:5.2.0')
+    testCompile('org.junit.jupiter:junit-jupiter-params:5.2.0')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.2.0')
+    testCompile "org.mockito:mockito-core:2.+"
+    testCompile('org.mockito:mockito-junit-jupiter:2.18.3')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 	exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
   }
